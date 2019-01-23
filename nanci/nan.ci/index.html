@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	
+	<title>NaN.ci</title>
+
+	<link rel="shortcut icon" href="assets/images/logo.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<style>
+	/* .rs > a{
+		padding: 10px;
+	} */
+	a{
+		text-decoration: none;
+		color: black;
+		/* cursor:pointer; */
+	}
+	.nav li:hover{
+		background-color: #aaa
+	}
+	.nav li:hover a{
+		color:black;
+	}
+	.submenu{
+		position: absolute;
+		background-color: #fff;
+		position: absolute;
+		z-index:25;
+	}
+	li{
+		list-style-type: none;
+	}
+	.submenu h3{
+		text-decoration: underline;
+	}
+	.flottant{
+		z-index:20;
+	}
+
+	
+</style>
+
+</head>
+
+<body class="home" style="position:relative; font-family:'Helvetica Neue'  ">
+	<!-- Menu -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="50" height="70" alt="logo NaN"></a> -->
+			</div>
+			<div class="navbar-collapse collapse">
+
+					<div class="col-md-4 widget" onmouseover="clicBody()">
+						<a style="color:#fff" href="mailto:#"> <i style="color:#fff; font-size:40px; padding: 0px 5px"  class="glyphicon glyphicon-envelope"></i></a>
+					</div>
+					<div class="col-md-4 widget" onmouseover="clicBody()">	
+					</div>
+					<div class="rs col-md-2 widget" onmouseover="clicBody()">
+								<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-facebook"></i></a>
+								<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-linkedin "></i></a>
+								<a href="#"><i style="color:#fff; font-size:40px ;padding: 0px 5px" class="fa fa-github "></i></a>
+							</div>
+
+
+				<ul class="nav navbar-nav pull-right"style="position:relative">
+					<li><a href="#">Acceuil</a></li>
+					<li ><a href="#" onmouseover="clicBody()" >Notre pedagogie</a></li>
+					<li class="formation"><a href="#"  onmouseover="showFormation()">Nos Formations</a></li>
+					<li class="service"><a  onmouseover="showService()" href="#">Produits et Services </a></li>
+					<li class="partenaires"><a href="#" onmouseover="showpartenaires()">Dévenir Partenaires</a></li>
+					<li class="crojets"><a href="#"  onmouseover="showprojets()">Nos Projets & références </a></li>
+					<li class="communaute"><a href="#" " onmouseover="showcommunaute()">Communautés étudiants </a></li>
+					<li><a href="#" onmouseover="clicBody()">Notre Equipe </a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div> 
+	<!-- /.fin menu-->
+
+									<!--
+									/%%%%%%%%%%%%	
+										DEBUT SOUS MENU
+									/%%%%%%%%%%%%%%%%
+									-->
+<!-- fuckimg sous menu de notre formation -->
+<div class="submenu col-md-6 col-xs-offset-3" id="subformation" style="position: fixed; padding:0px; margin-top: 100px; display: none;">				
+		<div>
+			<div class="col-md-10" style="padding:40px; margin:0px">
+					<div class="row">
+							<div class="col-md-6">
+								<h3> Certifiantes </h3>
+									<a>Par Concours</a> <br>
+									<a>Direct avec cours</a> <br>
+									<a>Direct sans cours</a> 
+							</div>
+	
+							<div class="col-md-6">
+								<h3>Cursus des moins 25ans</h3>
+								<a>Admis aux concours</a> <br>
+								<a>les + des 25ans</a> <br>
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<h3>Formation chez vous</h3>
+								<a>Entreprise</a> <br>
+								<a>Travailleurs</a> <br>
+								<a>Adolescents </a> <br>
+							</div>
+					</div>
+			</div>
+		<div class="col-md-2" style="background-color: #080808;">
+				<div class="row">
+						<br><br><br><br><br><br>
+				</div>	
+				<div class="row">
+						<br><br><br>
+					<center>	<img src="assets/images/logo.png" width="50" height="70"> </center>
+					<br><br><br>
+				</div>	
+				<div class="row">
+					<br><br><br><br><br><br>
+				</div>	
+				</div>
+				<br><br><br><br><br><br>
+				</div>
+		</div>
+	</div>
+
+<!-- fuckimg sous menu de notre prduits et service -->
+<div class="submenu col-md-6 col-xs-offset-4" id="subService" style="position:fixed;padding:0px; margin-top: 100px; display: none;"				<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-facebook"></i></a> 								<a href="#"><i style="position:fixed; color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-linkedin "></i></a> 								<a href="#"><i style="color:#fff; font-size:40px ;padding: 0px 5px" class="fa fa-github "></i></a>>		
+	<div >
+			<div class="col-md-10" style="padding:40px; margin:0px">
+					<div class="row">
+								<div class="col-md-6">
+									<h3>Services de Développement</h3>
+										<a href="#">Conception de site web </a> </b><br>
+										<a href="#">Développement d'application Mobile </a> </b><br>
+										<a href="#">Développement de Platephorme et logiciel</a> </b><br>
+										<a href="#">Hébergement de site web & donné dans le cloud</a> </b>
+										<a href="#">Nom de Domaine</a> </b>
+								</div>
+
+								<div class="col-md-6">
+									<h3>Commutateur téléphonique</h3>
+									<a href="#">autocommutateur</a> </b><br>
+									<a href="#">centre d'appel</a> </b><br>
+									<a href="#">minutes d'appels</a> </b><br>
+									<a href="#">Vente, location et financement d'Installations téléphonique</a> </b><br>
+									<a href="#">Autre solution de Voix sur ip</a> </b><br>
+								</div>
+					</div>
+			<!-- fhdjdhfdh -->
+				<div class="row">
+						<div class="col-md-6">
+							<h3>Multimédia</h3>
+								<a href="#">Montage de video </a> </b>
+								<a href="#">Design & graphisme, Photoshop </a> </b><br>
+								<a href="#">Gestion de page réseaux sociaux & communication</a> </b><br>
+								<a href="#">rédaction de contenue facebook/ twiter/ linkedin</a> </b>
+								<a href="#">conception strategie marketing digital</a> </b>
+								<a href="#">e-mail & SMS Marketing</a> </b>
+								<a href="#">sponsorisés page Facebook</a> </b>
+						</div>
+
+						<div class="col-md-6">
+							<h3>Sécurité</h3>
+							<a href="#">Backup & Replication</a> </b><br>
+							<a href="#">Config Firewall & ssl</a> </b><br>
+							<a href="#">Config Serveur Mail prof</a> </b><br>
+							<a href="#">Camera, sauvegarde, detection</a> </b><br>
+							<a href="#">Authentification porte d'entrée</a> </b><br>
+							<a href="#">Serrure électronique connecté</a> </b><br>
+						</div>	
+					</div>
+				</div>
+
+		<div class="col-md-2" style="background-color: #080808;">
+			<div class="row">
+					<br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>	
+			<div class="row">
+				<center>	<img src="assets/images/logo.png" width="50" height="70"> </center>
+			</div>	
+			<div class="row">
+				<br><br><br><br><br><br>
+			</div>	
+			<br><br><br><br><br><br>
+			</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- fuckimg sous menu de partenaires -->
+	<div class="submenu col-md-6 col-xs-offset-5" id="subpartenaires" style="position:fixed;padding:0px; margin-top: 100px; display: none;"				<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-facebook"></i></a> 								<a href="#"><i style="position:fixed; color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-linkedin "></i></a> 								<a href="#"><i style="color:#fff; font-size:40px ;padding: 0px 5px" class="fa fa-github "></i></a>>			
+		<div>
+			<div class="col-md-10" style="padding:40px; margin:0px">
+					<div class="row">
+						<div class="col-md-6">
+							<h3>Organisations Gouvernementales</h3>
+							<a href="#">Organisations Gouvernementales</a> </b><br>
+						</div>
+						<div class="col-md-6">
+							<h3>Institutions & Entreprise</h3>
+							<a href="#">organiser votre recrutement</a> </b><br>
+							<a href="#">réaliser vos idées</a> </b><br>
+						</div>
+					</div>
+			</div>
+			<div class="col-md-2" style="background-color: #080808;">
+				<div class="row">
+						<br><br><br><br>
+				</div>	
+				<div class="row">
+					<center>	<img src="assets/images/logo.png" width="50" height="70"> </center>
+				</div>	
+				<div class="row">
+					<br><br><br>
+				</div>	
+				<br><br><br>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+
+	<!-- fuckimg sous menu de projets -->
+	<div class="submenu col-md-6 col-xs-offset-6" id="subprojets" style="position:fixed;padding:0px; margin-top: 100px; display: none;"				<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-facebook"></i></a> 								<a href="#"><i style="position:fixed; color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-linkedin "></i></a> 								<a href="#"><i style="color:#fff; font-size:40px ;padding: 0px 5px" class="fa fa-github "></i></a>>			
+		<div>
+				<div class="col-md-10" style="padding:40px; margin:0px">
+						<div class="row">
+								<div class="col-md-6">
+									<h3>site Web vitrine</h3>
+									<a href="#">site Web vitrine</a> </b><br>
+								</div>
+								<div class="col-md-6">
+									<h3>Application Mobile</h3>
+									<a href="#">Application Mobile</a> </b><br>
+								</div>
+						</div>
+				
+						<div class="row">
+							<div class="col-md-6">
+								<h3>Plateforme de management e</h3>
+								<a href="#">Plateforme de management </a> </b><br>
+							</div>
+							<div class="col-md-6">
+								<h3>E-commerce  </h3>
+								<a href="#">E-commerce  </a> </b><br>
+								<a href="#">Autre application  </a> </b><br>
+							</div>
+						</div>
+				</div>
+				<div class="col-md-2" style="background-color: #080808;">
+					<div class="row">
+							<br><br><br><br><br><br><br><br>
+					</div>	
+					<div class="row">
+						<center>	<img src="assets/images/logo.png" width="50" height="70"> </center>
+					</div>	
+					<div class="row">
+						<br><br><br><br><br><br><br>
+					</div>	
+					<br><br><br>
+					</div>
+					</div>
+					
+				</div>
+		</div>
+	</div>
+
+	<!-- fuckimg sous menu de communaute -->
+	<div class="submenu col-md-6 col-xs-offset-6" id="subcommunaute" style="position:fixed;padding:0px; margin-top: 100px; display: none;"				<a href="#"><i style="color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-facebook"></i></a> 								<a href="#"><i style="position:fixed; color:#fff; font-size:40px; padding: 0px 5px" class="fa fa-linkedin "></i></a> 								<a href="#"><i style="color:#fff; font-size:40px ;padding: 0px 5px" class="fa fa-github "></i></a>>		
+		<div>
+			<div class="col-md-10" style="padding:40px; margin:0px">
+					<div class="row">
+							<div class="col-md-6">
+									<h3>Espace etudiant</h3>
+									<a>Réseau social</a> </b><br>
+									<a>Espace Chef d'équipe</a> </b><br>
+									<a>Escpace Responsable de Département</a> </b><br>
+									<a>Réservation de Imac</a> </b>
+							</div>
+							<div class="col-md-6">
+									<h3>Espace etudiant</h3>
+									<a>Espace Parrains</a> <br>
+									<a>Espace Concours</a> <br>
+									<a>Résultats & Classements</a>
+							</div>
+					</div>
+			</div>
+			<div class="col-md-2" style="background-color: #080808;">
+					<div class="row">
+							<br><br><br><br><br><br><br><br>
+					</div>	
+					<div class="row">
+						<center>	<img src="assets/images/logo.png" width="50" height="70"> </center>
+					</div>	
+					<div class="row">
+						<br><br><br><br><br><br><br>
+					</div>	
+					<br><br><br>
+					</div>
+					</div>
+					
+			</div>
+		</div>
+	</div>
+							<!--
+									/%%%%%%%%%%%%	
+										FIN SOUS MENU
+									/%%%%%%%%%%%%%%%%
+									-->
+
+	<!-- Header -->
+	<header id="head"  onclick="clicBody()" >
+		<div class="container">
+			<div class="row" onmouseover="clicBody()"  >
+				<img src="assets/logo.png" />
+				<h1 class="lead">NaN,ECOLE DE PROGRAMATION GRATUITE</h1>
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- NOTRE MODELE PEDAGOGIQUE. -->
+	<div class="container text-center" style='padding:70px' onmouseover="clicBody()">
+		<br> <br>
+		<h2 class="thin" style="font-style:bold">NOTRE MODELE PEDAGOGIQUE.</h2>
+		<p class="text-muted" style='margin:50PX'>
+				Se construire son savoir, se spécialiser dans le domaine qui nous facine le plus. A NaN Nous pensons que tout un chacun a un Talent, la première année de programmation à NaN n'est que l'étape initiale de la découverte de soi.
+
+				# Le Concours
+				Pour entrer à NaN, le premier test du concours est basé sur la logique , un exercice sans énoncé, le candidat est vite amené à faire appel a son imagination, ensuite après avoir validé le test N°1, pour le second test, le candidat est invité à regarder une vidéo d'algorithmique suivi d'un quiz, ce qui nous permet de savoir la force de compréhension de chacun des candidats.
+				
+				</div>
+
+		</p>
+	</div>
+	<!-- /pedagogie-->
+		
+	<!-- Produits et services -->
+	<div class="jumbotron top-space" onmouseover="clicBody()">
+		<div class="container">
+			
+			<h3 class="text-center thin" style="font-style:bold">Produits et services</h3>
+			
+			<div class="row" id="divProduits">
+				<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-in-left">
+						<img src="assets/images/website2.jpg" width="350" heigth="200">
+					<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>CREATION DE SITE WEB</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquid adipisci aspernatur. Soluta quisquam dignissimos earum quasi voluptate. Amet, dignissimos, tenetur vitae dolor quam iusto assumenda hic reprehenderit?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-in-left">
+						<img src="assets/images/mobile.jpg" width="350" heigth="200">
+					<div class="h-caption"><h4>CREATION D'APPLICATION MOBILE</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-in-right">
+						<img src="assets/images/montage.jpg" width="350" heigth="200">
+					<div class="h-caption"><h4>MONTAGE VIDEO</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-in-right">
+					<img src="assets/images/cad2.jpg" width="350" heigth="200">
+					<div class="h-caption"><h4>COURS A DOMICILE</h4></div>
+					<div class="h-body text-center">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	<!-- /Produits et services -->
+	<!-- Nos Formations -->
+
+	<div class="container" data-aos="fade-right" style='padding:50px' onmouseover="clicBody()">
+
+		<h2 class="text-center top-space" >Nos Formations</h2>
+		<br>
+
+		<div class="row">
+			<div >
+				<p style="font-size:18px;margin:20px">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis
+				
+			</div>
+		</div>
+
+</div>	<!-- /Nos Formations -->
+
+	<!-- NOTRE EQUIPE -->
+	<div class="jumbotron top-space" onmouseover="clicBody()">
+			<div class="container">
+				
+				<h3 class="text-center thin" style="font-style:bold">Notre Equipe</h3>
+				
+				<div class="row" id="divProduits">
+					<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-out">
+							<img src="assets/images/website2.jpg" width="350" heigth="200">
+						<div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>YVES SANTOZ</h4></div>
+						
+					</div>
+					<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-out">
+							<img src="assets/images/mobile.jpg" width="350" heigth="200">
+						<div class="h-caption"><h4>SUPER CODEUR</h4></div>
+						
+					</div>
+					<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-out">
+							<img src="assets/images/montage.jpg" width="350" heigth="200">
+						<div class="h-caption"><h4>SUPER CODEUR 2</h4></div>
+						
+					</div>
+					<div class="col-md-3 col-sm-6 highlight" data-aos="zoom-out">
+						<img src="assets/images/cad2.jpg" width="350" heigth="200">
+						<div class="h-caption"><h4>SUPER CODEUR 3</h4></div>
+						
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		<!-- /NOTRE EQUIPE -->
+
+	
+	
+
+		
+		<div class="flottant" data-aos="fade-right" id="explication" onmouseover="clicBody()" style="padding:10px;background-color:#cacaca;width: 260px;border-radius:15px;position: fixed;right:20px; top:20%">
+			<span class="flottant" style="font-family:open sans"><a href="hamza.mp4" style="text-decoration:none;color:black">condition d'entrer a nan</span> <span class="glyphicon glyphicon-play"></span></a> 
+		</div>
+		<div data-aos="fade-left" id="explication" style="padding:10px;width: 260px;position: fixed;right:20px; top:25%">
+				<span style="font-family:open sans"><a href="#" class="btn btn-success" style="text-decoration:none;color:black">JE CANDIDATE</span> <span class="glyphicon glyphicon-education"></span></a> 
+			</div>
+	<footer id="footer" class="top-space">
+
+		<div class="footer1" onmouseover="clicBody()">
+			<div class="container">
+				<div class="row">
+					
+					
+					<div class="col-md-4 widget">
+								<h1 class="widget-title" style="font-size:20px">CONTACTER NOUS</h1><br>
+									<div class="widget-body"  style="font-size:18px">
+										<p> <i class="glyphicon glyphicon-envelope"></i> <a href="mailto:#">info@nan.ci</a></p>
+										<p>telephone:78735784</p>
+										<p>Cocody angre, nouveau CHU</p>	
+											
+									</div>
+					</div>
+
+					<div class="col-md-4 widget">
+						
+						<h1 class="widget-title" style="font-size:20px">NOS PARTENAIRES</h1><br>
+							<div class="widget-body"  style="font-size:18px">
+								<p><a href="#">partenaire 1</a></p>	
+								<p><a href="#">partenaire 1</a></p>	
+								<p><a href="#">partenaire 1</a></p>	
+							</div>
+					</div>
+					<div class="col-md-4 widget"><br>
+							<div class="widget-body"  style="font-size:18px">	
+							<center>
+								<p><img src="assets/images/logo.png" style="width:70px; height:90px" /></p>
+								<p><a href="#">charte de bonne conduite</a></p>	
+							</center>
+							</div>
+					</div>
+
+				</div> 
+			</div>
+
+
+		</div>
+
+		<div class="footer2" style="padding:15px" onmouseover="clicBody()" ><center>Copyright &copy; Not a Number 2019</center>	</div> 
+			
+	</div>
+</div>
+
+</footer>	
+		
+
+
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<script>
+		AOS.init();
+
+		// elements menu
+		let formation = document.getElementsByClassName("formation");
+		let service = document.getElementsByClassName("service");
+		let partenaires = document.getElementById("partenaires");
+		let projets = document.getElementById("projets");
+		let communaute = document.getElementById("communaute");
+
+		// sous menu
+		let subformation = document.getElementById("subformation");
+		let subService = document.getElementById("subService");
+		let subpartenaires = document.getElementById("subpartenaires");
+		let subprojets = document.getElementById("subprojets");
+		let subcommunaute = document.getElementById("subcommunaute");
+
+		function showFormation(){
+				subformation.style.display ="none";
+				subformation.style.display ="block";
+				subService.style.display ="none";
+				subpartenaires.style.display ="none";
+				subprojets.style.display ="none";
+				subcommunaute.style.display ="none";
+			}
+
+		function showService(){
+				subService.style.display ="block";
+				subformation.style.display ="none";
+				subpartenaires.style.display ="none";
+				subprojets.style.display ="none";
+				subcommunaute.style.display ="none";
+		}
+		
+		function showpartenaires(){
+				subService.style.display ="none";
+				subformation.style.display ="none";
+				subpartenaires.style.display ="block";
+				subprojets.style.display ="none";
+				subcommunaute.style.display ="none";
+		}
+
+		function showprojets(){
+				subService.style.display ="none";
+				subformation.style.display ="none";
+				subpartenaires.style.display ="none";
+				subprojets.style.display ="block";
+				subcommunaute.style.display ="none";
+		}
+
+		function showcommunaute(){
+				subService.style.display ="none";
+				subformation.style.display ="none";
+				subpartenaires.style.display ="none";
+				subprojets.style.display ="none";
+				subcommunaute.style.display ="block";
+		}
+
+		function clicBody(){
+			subService.style.display ="none";
+				subformation.style.display ="none";
+				subpartenaires.style.display ="none";
+				subprojets.style.display ="none";
+				subcommunaute.style.display ="none"
+		}
+		
+	</script>
+</body>
+</html>
