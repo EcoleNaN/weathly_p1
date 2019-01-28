@@ -114,7 +114,7 @@ background: #fff;
 .manage-toggle .btn_deux
 {
   position: absolute;
-  right:41.5rem;
+  right:62.5rem;
   padding: 10px;
   border:1px solid white;
   border-top-left-radius: 5px;
@@ -420,4 +420,45 @@ h1
   font-weight: bold;
   
 }
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
 
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/  
+  //CSS
+  .manage-toggle .btn_deux
+{
+  position: absolute;
+  right:41.5rem;
+  padding: 10px;
+  border:1px solid white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #ffffff;
+  font-size: 25px;
+  top: 9.2rem;
+
+}
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+ .manage-toggle .btn_deux
+{
+  position: absolute;
+  right:40.5rem;
+  padding: 10px;
+  border:1px solid white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #ffffff;
+  font-size: 25px;
+  top: 9.2rem;
+
+}  
+}
